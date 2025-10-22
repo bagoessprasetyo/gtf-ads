@@ -15,12 +15,13 @@ export default function banner() {
     { img: imageCarousel7 },
     { img: imageCarousel8 },
   ]
+
   return (
     <section className="bg-[#0E004D] py-8 px-5 text-white bg-cover bg-bottom flex flex-col gap-8" style={{ backgroundImage: `url(${bgBanner})` }}>
       <div className="text-center w-full lg:w-[920px] lg:mx-auto">
         <h1 className="text-[28px] font-semibold leading-9 tracking-[0.07px] uppercase lg:text-5xl lg:leading-14">Your FULL-FUNNEL GROWTH MARKETING PARTNER</h1>
         <p className="tracking-[0.08px] leading-6 mt-3 mb-7">Empowering brands with performance-driven growth that delivers real, measurable ROI. </p>
-        <Button link="#" title="Yes, I Want the Session!" className="mx-auto" />
+        <Button link="#tailored-form" title="Yes, I Want the Session!" className="mx-auto" />
       </div>
       <div>
         <div className="flex items-center justify-center gap-2.5 mb-2.5 lg:mb-5">

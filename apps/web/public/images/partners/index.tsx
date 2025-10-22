@@ -1,15 +1,15 @@
-import partner1 from "./Clip path group.webp";
-import partner2 from "./Fill (1).webp";
-import partner3 from "./Fill (2).webp";
-import partner4 from "./Fill (3).webp";
-import partner5 from "./Fill.webp";
-import partner6 from "./Group 1597883018.webp";
-import partner7 from "./Group.webp";
-import partner8 from "./Page-1.webp";
-import partner9 from "./Rectangle 11938.webp";
-import partner10 from "./Rectangle 11939 (1).webp";
-import partner11 from "./Rectangle 11939.webp";
-import partner12 from "./paper-logo-dark.webp";
+import partner1 from "./hubspot.webp";
+import partner2 from "./sleekflow.webp";
+import partner3 from "./lazada.webp";
+import partner4 from "./Ikigai-Orange 1.webp";
+import partner5 from "./paper-logo-dark.webp";
+import partner6 from "./global_paws 1.webp";
+import partner7 from "./kane.webp";
+import partner8 from "./tomazz.webp";
+import partner9 from "./hokione.webp";
+import partner10 from "./azure.webp";
+import partner11 from "./lion parcel.webp";
+import partner12 from "./hoc.webp";
 
 export {
   partner1,
