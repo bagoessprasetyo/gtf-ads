@@ -1,31 +1,33 @@
 "use client";
 import Link from "next/link";
 import { ModeToggle } from "./mode-toggle";
+import Image from "next/image";
+import logoGetFound from "../../public/icons/logo-getfound.svg";
 
 export default function Header() {
-	const links = [
-		{ to: "/seo", label: "SEO" },
-		{ to: "/sales-lead-generation", label: "Sales & Lead Generation" },
-		{ to: "/consulting-services", label: "Consulting Services" },
-		{ to: "/design-technology", label: "Design & Technology" },
-		{ to: "/digital-marketing", label: "Digital Marketing" },
-		{ to: "/about-us", label: "About Us" },
-		{ to: "/id", label: "ID" }
-	] as const;
+	// const links = [
+	// 	{ to: "/seo", label: "SEO" },
+	// 	{ to: "/sales-lead-generation", label: "Sales & Lead Generation" },
+	// 	{ to: "/consulting-services", label: "Consulting Services" },
+	// 	{ to: "/design-technology", label: "Design & Technology" },
+	// 	{ to: "/digital-marketing", label: "Digital Marketing" },
+	// 	{ to: "/about-us", label: "About Us" },
+	// 	{ to: "/id", label: "ID" }
+	// ] as const;
 
 	return (
 		<div style={{ backgroundColor: "#0E004D" }} className="text-white">
-			<div className="flex flex-row items-center justify-between px-6 py-4">
-				{/* Logo and Company Info */}
+			<div className="flex flex-row items-center justify-between px-5 h-16 md:h-[80px] md:py-8">
+				{/* logo */}
 				<div className="flex items-center gap-4">
 					<div className="flex flex-col">
-						<h1 className="text-xl font-bold text-white">GETFOUND</h1>
-						<p className="text-xs" style={{ color: "#D5CCFF" }}>Strategic Growth Consulting</p>
+						<Image src={logoGetFound} alt="Logo Get Found" className="w-[120px]" />
+						<p className="text-xs hidden md:block md:mt-1">Strategic Growth Consulting</p>
 					</div>
 				</div>
 
 				{/* Navigation */}
-				<nav className="flex gap-6 text-sm font-medium">
+				{/* <nav className="flex gap-6 text-sm font-medium">
 					{links.map(({ to, label }) => {
 						return (
 							<Link 
@@ -37,18 +39,13 @@ export default function Header() {
 							</Link>
 						);
 					})}
-				</nav>
+				</nav> */}
 
 				{/* Right side actions */}
 				<div className="flex items-center gap-4">
-					<ModeToggle />
-					<button 
-						className="px-4 py-2 text-sm font-medium rounded-md transition-colors"
-						style={{ 
-							backgroundColor: "#D5CCFF", 
-							color: "#0E004D"
-						}}
-					>
+					{/* <ModeToggle /> */}
+					<button
+						className="px-5 py-2 text-sm font-medium rounded-md transition-colors bg-white text-[#1D00A0] h-auto md:h-9 md:text-[16px] tracking-[-0.176px] md:text-[#0A0A0A] md:px-4 md:py-[6px]">
 						Get a Proposal
 					</button>
 				</div>
