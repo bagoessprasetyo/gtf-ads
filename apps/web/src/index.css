@@ -16,6 +16,8 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -27,7 +29,8 @@ h6 {
   font-family: var(--font-spaceGrotesk);
 }
 
-p, a {
+p,
+a {
   font-family: var(--font-archivo);
 }
 
