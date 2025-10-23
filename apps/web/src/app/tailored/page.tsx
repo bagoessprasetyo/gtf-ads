@@ -1,11 +1,9 @@
 "use client";
-
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
-
 import Banner from "@/components/banner";
 import Button from "@/components/button";
+import { gsap } from "gsap";
 
 import {
     partner1, partner2, partner3, partner4, partner5, partner6,
@@ -17,7 +15,30 @@ import {
 } from "../../../public/images";
 
 export default function TailoredPage() {
+
+    const marquee = useRef<HTMLDivElement>(null);
+
+
     useEffect(() => {
+        // marquee
+        const el = marquee.current;
+        if (!el) return;
+
+        el.innerHTML += el.innerHTML;
+
+        const width = el.scrollWidth / 2;
+
+        gsap.to(el, {
+            x: -width,
+            duration: 10,
+            ease: "none",
+            repeat: -1,
+            modifiers: {
+                x: gsap.utils.unitize((x) => parseFloat(x) % width), 
+            },
+        });
+
+        // hubspot
         const script = document.createElement("script");
         script.src = "https://js-na2.hsforms.net/forms/embed/46392522.js";
         script.defer = true;
@@ -51,21 +72,23 @@ export default function TailoredPage() {
                     Trusted by Global Partners
                 </h3>
                 <div className="block md:hidden">
-                    <Marquee>
-                        <div className="flex flex-row items-center gap-[39px]">
-                            {imgPartners.map((img, index) => (
-                                <img key={index} src={img.src} alt={`partner-${index}`} />
-                            ))}
-                        </div>
-                    </Marquee>
+                    <div className="flex gap-[39px] overflow-hidden" ref={marquee}>
+                        {imgPartners.map((img, index) => (
+                            <Image
+                                key={index}
+                                src={img}
+                                alt={`partner-${index}`}
+                                className="w-auto h-auto" />
+                        ))}
+                    </div>
                 </div>
-                <div className="hidden md:grid md:grid-cols-4 justify-center items-center gap-6">
+                <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 justify-center items-center gap-6 w-full">
                     {imgPartners.map((img, index) => (
                         <Image
                             key={index}
                             src={img}
                             alt={`partner-${index}`}
-                            className="py-[27px] px-[66.943px] h-auto w-auto max-w-none"
+                            className="py-[27px] px-[66.943px] h-auto w-full mx-auto"
                         />
                     ))}
                 </div>
@@ -113,9 +136,12 @@ export default function TailoredPage() {
             </section>
 
             {/* Gallery */}
-            <section className="py-10 px-5 flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6 lg:py-20">
+            <section className="py-10 bg-black px-5 flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6 lg:py-20">
                 {images.map((img, index) => (
-                    <Image key={index} src={img} alt={`gallery-${index}`} className="h-auto w-full object-contain" />
+                    <Image
+                        key={index} src={img}
+                        alt={`gallery-${index}`}
+                        className="h-auto w-full object-contain" />
                 ))}
             </section>
 
