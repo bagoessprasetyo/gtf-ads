@@ -32,7 +32,7 @@ export default function banner() {
           <div className="w-14 h-px bg-white hidden lg:block"></div>
         </div>
         <Marquee>
-          <div className="flex flex-row gap-[7.681px] lg:gap-5">
+          <div className="flex flex-row flex-wrap gap-[7.681px] lg:gap-5">
             {images.map(({ img }, i) => (
               <Image
                 key={i}
