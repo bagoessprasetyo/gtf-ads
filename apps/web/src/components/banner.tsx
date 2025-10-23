@@ -24,9 +24,9 @@ export default function banner() {
         <Button link="#tailored-form" title="Yes, I Want the Session!" className="mx-auto" />
       </div>
       <div>
-        <div className="flex items-center justify-center gap-2.5 mb-2.5 lg:mb-5 px-5">
+        <div className="flex items-center justify-center gap-2.5 mb-4 md:mb-2.5 lg:mb-5 px-5">
           <div className="w-14 h-px bg-white hidden lg:block"></div>
-          <p className="text-[16px] md:text-sm leading-6 tracking-[0.175px] text-center">
+          <p className="text-sm leading-6 tracking-[0.175px] text-center">
             Trusted by 300+ clients across SEA to scale smarter, and stronger
           </p>
           <div className="w-14 h-px bg-white hidden lg:block"></div>
