@@ -17,7 +17,7 @@ export default function Header() {
 
 	return (
 		<div style={{ backgroundColor: "#0E004D" }} className="text-white">
-			<div className="flex flex-row items-center justify-between px-5 h-16 md:h-[80px] md:py-8">
+			<div className="flex flex-row items-center justify-between px-5 h-16 md:h-20 md:py-8 lg:px-20">
 				{/* logo */}
 				<div className="flex items-center gap-4">
 					<div className="flex flex-col">
