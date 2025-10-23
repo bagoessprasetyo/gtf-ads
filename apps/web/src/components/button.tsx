@@ -9,7 +9,7 @@ interface ButtonProps {
 
 export default function button({ title, link, className }: ButtonProps) {
   return (
-    <a href={link} className={`${className} bg-[#D5CCFF] font-semibold rounded-lg py-3 px-6 text-[#130066] tracking-[0.08px] flex items-center gap-2 w-fit`}>
+    <a href={link} className={`${className} bg-[#D5CCFF] font-semibold rounded-lg py-3 px-6 text-[#130066] tracking-[0.08px] flex items-center gap-2 w-fit duration-150 hover:bg-white`}>
       {title}
       <Image src={iconRight} alt="icon-right" />
     </a>
