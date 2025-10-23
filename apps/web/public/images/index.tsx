@@ -16,6 +16,7 @@ import img4 from "./4.webp";
 import img5 from "./5.webp";
 import img6 from "./6.webp";
 import imgSection3 from "./Section 3.webp";
+import dore from "./dore.webp";
 
 export {
   imageCarousel1,
@@ -36,4 +37,5 @@ export {
   img5,
   img6,
   imgSection3,
+  dore,
 }

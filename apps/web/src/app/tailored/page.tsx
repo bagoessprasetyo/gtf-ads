@@ -12,7 +12,7 @@ import {
 } from "../../../public/images/partners";
 
 import {
-    ashley, globalpws, ikigai, img1, img2, img3, img4, img5, img6,
+    ashley, dore, globalpws, ikigai, img1, img2, img3, img4, img5, img6,
 } from "../../../public/images";
 
 export default function TailoredPage() {
@@ -35,8 +35,8 @@ export default function TailoredPage() {
 
     const cards = [
         { img: ashley, title: "Ashley Hotel Group", content: "15x ROAS" },
+        { img: dore, title: "DORE", content: "IDR 30B New B2B Pipeline Generated" },
         { img: ikigai, title: "IKIGAI", content: "700+ Members Monthly" },
-        { img: globalpws, title: "Global Paws", content: "3× Leads via Organic SEO" },
     ];
 
     const images = [img1, img2, img3, img4, img5, img6];
@@ -130,7 +130,7 @@ export default function TailoredPage() {
             <section className="bg-[#F2F4F7] py-12 px-5 lg:py-20 lg:px-[120px]">
                 <div className="flex flex-col gap-12 md:grid md:grid-cols-2 md:items-center lg:gap-20">
                     <div className="md:order-2">
-                        <h4 className="text-[#141C25] text-2xl font-semibold leading-8 lg:text-5xl lg:leading-[1.4]">
+                        <h4 className="text-[#141C25] text-2xl font-semibold leading-8 lg:text-5xl lg:leading-14">
                             We Deliver Measurable Results, not clicks.
                         </h4>
                         <p className="text-[#414E62] tracking-[0.08px] mt-3">
@@ -141,13 +141,13 @@ export default function TailoredPage() {
                         <Button link="#tailored-form" title="Reserve My Strategy Session" className="hidden lg:flex mt-6" />
                     </div>
 
-                    <div className="relative rounded-2xl">
+                    <div className="relative">
                         <video
                             autoPlay
                             loop
                             muted
                             playsInline
-                            className="w-full h-[353.274px] rounded-2xl lg:h-[582px]"
+                            className="w-full rounded-2xl"
                         >
                             <source src="/videos/motion-gtm.webm" type="video/webm" />
                         </video>
@@ -158,17 +158,17 @@ export default function TailoredPage() {
             {/* Contact */}
             <section className="bg-white py-14 px-5 lg:py-20 lg:px-60" id="tailored-form">
                 <div className="border border-[#E4E7EC] rounded-[30px] p-6 lg:p-8 w-full">
-                    <h4 className="mb-10 text-2xl font-semibold leading-8 text-[#141C25] lg:text-4xl">
+                    <h4 className="text-2xl font-semibold leading-8 text-[#141C25] lg:text-4xl">
                         Book a <span className="text-[#4419FF]">Strategy Session</span> today
                     </h4>
-                    <Form />
+                    {/* <Form /> */}
 
-                    {/* <div
+                    <div
                         className="hs-form-frame"
                         data-region="na2"
                         data-form-id="ed38e94c-6aae-4f54-a413-e89c11b7a263"
                         data-portal-id="46392522"
-                    /> */}
+                    />
                 </div>
             </section>
         </div>
