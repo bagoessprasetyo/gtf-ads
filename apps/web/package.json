@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack --port=3000",
     "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production PORT=3001 node .next/standalone/Documents/react/my-better-t-app/apps/web/server.js"
+    "start": "NODE_ENV=production PORT=3001 node .next/standalone/server.js"
   },
   "dependencies": {
     "@my-better-t-app/api": "*",
