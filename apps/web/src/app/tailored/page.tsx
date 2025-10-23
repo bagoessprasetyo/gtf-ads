@@ -68,7 +68,7 @@ export default function TailoredPage() {
                             key={index}
                             src={img}
                             alt={`partner-${index}`}
-                            className="py-[27px] px-[66.943px] h-auto w-full mx-auto"
+                            className={`mx-auto ${index === 9 ? "w-[80px]" : "h-auto w-full py-[27px] px-[66.943px]"}`}
                         />
                     ))}
                 </div>
