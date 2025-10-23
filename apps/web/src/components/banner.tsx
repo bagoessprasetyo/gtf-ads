@@ -26,7 +26,7 @@ export default function banner() {
       <div>
         <div className="flex items-center justify-center gap-2.5 mb-2.5 lg:mb-5 px-5">
           <div className="w-14 h-px bg-white hidden lg:block"></div>
-          <p className="text-sm leading-6 tracking-[0.175px] text-center">
+          <p className="text-[16px] md:text-sm leading-6 tracking-[0.175px] text-center">
             Trusted by 300+ clients across SEA to scale smarter, and stronger
           </p>
           <div className="w-14 h-px bg-white hidden lg:block"></div>
@@ -38,7 +38,7 @@ export default function banner() {
                 key={i}
                 src={img}
                 alt={`carousel-${i}`}
-                className="w-[153.615px] h-[153.615px] rounded-[1.536px] lg:w-[400px] lg:h-[400px] lg:rounded-sm  mr-[7.681px] lg:mr-5"
+                className="w-[230px] h-[230px] rounded-[1.536px] lg:w-[400px] lg:h-[400px] lg:rounded-sm  mr-3 lg:mr-5"
               />
             ))}
           </div>
