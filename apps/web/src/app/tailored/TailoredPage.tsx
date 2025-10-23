@@ -47,7 +47,7 @@ export default function TailoredPage() {
 
             {/* Partners */}
             <section className="py-10 bg-[#0A0A0A] lg:py-20 overflow-hidden lg:px-[120px]">
-                <h3 className="text-center tracking-[0.08px] font-semibold mb-8 lg:text-[32px]">
+                <h3 className="text-white text-center tracking-[0.08px] font-semibold mb-8 lg:text-[32px]">
                     Trusted by Global Partners
                 </h3>
                 <div className="block md:hidden">
@@ -78,7 +78,7 @@ export default function TailoredPage() {
             {/* Proven Impact */}
             <section className="py-14 bg-white px-5 lg:py-[60px] lg:px-20">
                 <div className="bg-[#140018] rounded-[12px] py-4 px-6 lg:p-8">
-                    <h4 className="text-2xl leading-8 font-semibold lg:text-5xl">
+                    <h4 className="text-white text-2xl leading-8 font-semibold lg:text-5xl">
                         Proven Impact Across Industries
                     </h4>
                     <p className="text-[#E4E7EC] tracking-[0.08px] my-6">
@@ -106,7 +106,7 @@ export default function TailoredPage() {
                                             fill="white"
                                         />
                                     </svg>
-                                    <span className="text-[12px] tracking-[0.048px] leading-5 font-medium">
+                                    <span className="text-[12px] text-white tracking-[0.048px] leading-5 font-medium">
                                         {content}
                                     </span>
                                 </div>
