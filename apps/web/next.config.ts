@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
 		buildActivity: false,
 		buildActivityPosition: 'bottom-right',
 	},
+	// Fix standalone output path
+	distDir: '.next',
 };
 
 export default nextConfig;
