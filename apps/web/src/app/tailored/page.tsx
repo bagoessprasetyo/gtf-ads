@@ -1,9 +1,9 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import Banner from "@/components/banner";
 import Button from "@/components/button";
-import { gsap } from "gsap";
+import Marquee from "react-fast-marquee";
 
 import {
     partner1, partner2, partner3, partner4, partner5, partner6,
@@ -15,29 +15,7 @@ import {
 } from "../../../public/images";
 
 export default function TailoredPage() {
-
-    const marquee = useRef<HTMLDivElement>(null);
-
-
     useEffect(() => {
-        // marquee
-        const el = marquee.current;
-        if (!el) return;
-
-        el.innerHTML += el.innerHTML;
-
-        const width = el.scrollWidth / 2;
-
-        gsap.to(el, {
-            x: -width,
-            duration: 10,
-            ease: "none",
-            repeat: -1,
-            modifiers: {
-                x: gsap.utils.unitize((x) => parseFloat(x) % width), 
-            },
-        });
-
         // hubspot
         const script = document.createElement("script");
         script.src = "https://js-na2.hsforms.net/forms/embed/46392522.js";
@@ -67,20 +45,22 @@ export default function TailoredPage() {
             <Banner />
 
             {/* Partners */}
-            <section className="py-10 bg-[#0A0A0A] lg:py-20">
+            <section className="py-10 bg-[#0A0A0A] lg:py-20 overflow-hidden">
                 <h3 className="text-center tracking-[0.08px] font-semibold mb-8 lg:text-[32px]">
                     Trusted by Global Partners
                 </h3>
                 <div className="block md:hidden">
-                    <div className="flex gap-[39px] overflow-hidden" ref={marquee}>
-                        {imgPartners.map((img, index) => (
-                            <Image
-                                key={index}
-                                src={img}
-                                alt={`partner-${index}`}
-                                className="w-auto h-auto" />
-                        ))}
-                    </div>
+                    <Marquee>
+                        <div className="flex flex-wrap items-center gap-[39px]">
+                            {imgPartners.map((img, index) => (
+                                <Image
+                                    key={index}
+                                    src={img}
+                                    alt={`partner-${index}`}
+                                    className="w-auto h-auto" />
+                            ))}
+                        </div>
+                    </Marquee>
                 </div>
                 <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 justify-center items-center gap-6 w-full">
                     {imgPartners.map((img, index) => (
