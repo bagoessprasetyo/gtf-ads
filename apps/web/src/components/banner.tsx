@@ -21,7 +21,7 @@ export default function banner() {
       <div className="text-center w-full lg:w-[920px] lg:mx-auto px-5">
         <h1 className="text-[28px] font-semibold leading-9 tracking-[0.07px] uppercase lg:text-5xl lg:leading-14">Your FULL-FUNNEL GROWTH MARKETING PARTNER</h1>
         <p className="tracking-[0.08px] leading-6 mt-3 mb-7">Empowering brands with performance-driven growth that delivers real, measurable ROI. </p>
-        <Button link="#tailored-form" title="Yes, I Want the Session!" className="mx-auto" />
+        <Button link="#tailored-form" title="Book a Strategy Session" className="mx-auto" />
       </div>
       <div>
         <div className="flex items-center justify-center gap-2.5 mb-4 md:mb-2.5 lg:mb-5 px-5">
