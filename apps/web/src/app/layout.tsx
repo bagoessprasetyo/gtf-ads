@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Archivo, Space_Grotesk } from "next/font/google";
 import "../index.css";
 import Providers from "@/components/providers";
 import Header from "@/components/header";
@@ -15,6 +15,21 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
+const archivo = Archivo({
+	variable: "--font-archivo",
+	subsets: ["latin"],
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	style: ["normal", "italic"],
+	display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+	variable: "--font-space-grotesk",
+	subsets: ["latin"],
+	weight: ["300", "400", "500", "600", "700"],
+	display: "swap",
+});
+
 export const metadata: Metadata = {
 	title: "Tailored | GetFound",
 };
@@ -27,7 +42,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} ${spaceGrotesk.variable} antialiased`}
 			>
 				<Providers>
 					<div className="grid grid-rows-[auto_1fr] h-svh">
