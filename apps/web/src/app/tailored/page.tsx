@@ -4,6 +4,7 @@ import Image from "next/image";
 import Banner from "@/components/banner";
 import Button from "@/components/button";
 import Marquee from "react-fast-marquee";
+import Form from "@/components/form";
 
 import {
     partner1, partner2, partner3, partner4, partner5, partner6,
@@ -45,7 +46,7 @@ export default function TailoredPage() {
             <Banner />
 
             {/* Partners */}
-            <section className="py-10 bg-[#0A0A0A] lg:py-20 overflow-hidden">
+            <section className="py-10 bg-[#0A0A0A] lg:py-20 overflow-hidden lg:px-[120px]">
                 <h3 className="text-center tracking-[0.08px] font-semibold mb-8 lg:text-[32px]">
                     Trusted by Global Partners
                 </h3>
@@ -68,14 +69,14 @@ export default function TailoredPage() {
                             key={index}
                             src={img}
                             alt={`partner-${index}`}
-                            className={`mx-auto ${index === 9 ? "w-[80px]" : "h-auto w-full py-[27px] px-[66.943px]"}`}
+                            className={`mx-auto ${index === 9 ? "w-20" : "h-auto w-full py-[27px] px-[66.943px]"}`}
                         />
                     ))}
                 </div>
             </section>
 
             {/* Proven Impact */}
-            <section className="py-14 bg-white px-5 lg:py-[60px]">
+            <section className="py-14 bg-white px-5 lg:py-[60px] lg:px-20">
                 <div className="bg-[#140018] rounded-[12px] py-4 px-6 lg:p-8">
                     <h4 className="text-2xl leading-8 font-semibold lg:text-5xl">
                         Proven Impact Across Industries
@@ -116,7 +117,7 @@ export default function TailoredPage() {
             </section>
 
             {/* Gallery */}
-            <section className="py-10 bg-black px-5 flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6 lg:py-20">
+            <section className="py-10 bg-black px-5 flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-y-8 lg:gap-x-6 lg:py-20 lg:px-[120px]">
                 {images.map((img, index) => (
                     <Image
                         key={index} src={img}
@@ -126,7 +127,7 @@ export default function TailoredPage() {
             </section>
 
             {/* Deliver Result */}
-            <section className="bg-[#F2F4F7] py-12 px-5 lg:py-20">
+            <section className="bg-[#F2F4F7] py-12 px-5 lg:py-20 lg:px-[120px]">
                 <div className="flex flex-col gap-12 md:grid md:grid-cols-2 md:items-center lg:gap-20">
                     <div className="md:order-2">
                         <h4 className="text-[#141C25] text-2xl font-semibold leading-8 lg:text-5xl lg:leading-[1.4]">
@@ -155,17 +156,19 @@ export default function TailoredPage() {
             </section>
 
             {/* Contact */}
-            <section className="bg-white py-14 px-5 lg:py-20" id="tailored-form">
-                <div className="border border-[#E4E7EC] rounded-[30px] p-6 lg:p-8 w-full lg:w-[70%] lg:mx-auto">
-                    <h4 className="text-2xl font-semibold leading-8 text-[#141C25] lg:text-4xl">
+            <section className="bg-white py-14 px-5 lg:py-20 lg:px-60" id="tailored-form">
+                <div className="border border-[#E4E7EC] rounded-[30px] p-6 lg:p-8 w-full">
+                    <h4 className="mb-10 text-2xl font-semibold leading-8 text-[#141C25] lg:text-4xl">
                         Book a <span className="text-[#4419FF]">Strategy Session</span> today
                     </h4>
-                    <div
+                    <Form />
+
+                    {/* <div
                         className="hs-form-frame"
                         data-region="na2"
                         data-form-id="ed38e94c-6aae-4f54-a413-e89c11b7a263"
                         data-portal-id="46392522"
-                    />
+                    /> */}
                 </div>
             </section>
         </div>
