@@ -32,13 +32,13 @@ export default function banner() {
           <div className="w-14 h-px bg-white hidden lg:block"></div>
         </div>
         <Marquee>
-          <div className="flex flex-row flex-wrap gap-[7.681px] lg:gap-5">
+          <div className="flex">
             {images.map(({ img }, i) => (
               <Image
                 key={i}
                 src={img}
                 alt={`carousel-${i}`}
-                className="w-[153.615px] h-[153.615px] rounded-[1.536px] lg:w-[400px] lg:h-[400px] lg:rounded-sm"
+                className="w-[153.615px] h-[153.615px] rounded-[1.536px] lg:w-[400px] lg:h-[400px] lg:rounded-sm  mr-[7.681px] lg:mr-5"
               />
             ))}
           </div>
