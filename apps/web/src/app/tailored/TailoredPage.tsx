@@ -52,13 +52,13 @@ export default function TailoredPage() {
                 </h3>
                 <div className="block md:hidden">
                     <Marquee>
-                        <div className="flex flex-wrap items-center gap-[39px]">
+                        <div className="flex flex-wrap items-center">
                             {imgPartners.map((img, index) => (
                                 <Image
                                     key={index}
                                     src={img}
                                     alt={`partner-${index}`}
-                                    className="w-auto h-auto" />
+                                    className="w-auto h-auto mr-[39px]" />
                             ))}
                         </div>
                     </Marquee>
