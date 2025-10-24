@@ -1,5 +1,8 @@
+"use client";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Archivo, Space_Grotesk } from "next/font/google";
+import { usePathname } from "next/navigation";
 import "../index.css";
 import Providers from "@/components/providers";
 import Header from "@/components/header";
@@ -30,26 +33,34 @@ const spaceGrotesk = Space_Grotesk({
 	display: "swap",
 });
 
-export const metadata: Metadata = {
-	title: "Tailored | GetFound",
-};
+// Note: metadata export is not supported in client components
+// Moved to individual page components or use generateMetadata function
 
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const pathname = usePathname();
+	const isThankYouPage = pathname === "/tailored-form/thank-you";
+
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} ${spaceGrotesk.variable} antialiased`}
 			>
 				<Providers>
-					<div className="grid grid-rows-[auto_1fr] h-svh">
-						<Header />
-						{children}
-						<Footer />
-					</div>
+					{isThankYouPage ? (
+						// Thank you page without header and footer
+						children
+					) : (
+						// All other pages with header and footer
+						<div className="grid grid-rows-[auto_1fr_auto] h-svh">
+							<Header />
+							{children}
+							<Footer />
+						</div>
+					)}
 				</Providers>
 			</body>
 		</html>
