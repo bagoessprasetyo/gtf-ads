@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import TailoredPage from "./TailoredPage"; 
+import TailoredPage from "./TailoredPage";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
     title: "Tailored - GetFound",
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-    return <TailoredPage />;
+    return (
+        <>
+            <GoogleTagManager gtmId="G-ZVRHXWGWVC" />
+            <TailoredPage />
+        </>
+    );
 }
