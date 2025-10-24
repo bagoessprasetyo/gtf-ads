@@ -94,7 +94,7 @@ export default function TailoredPage() {
                                 <Image
                                     src={img}
                                     alt={title}
-                                    className="rounded-[2.757px] h-[165.405px] w-[272px] md:w-[394.667px] md:h-[240px] lg:rounded-sm"
+                                    className="rounded-[2.757px] h-[165.405px] w-full md:w-[394.667px] md:h-[240px] lg:rounded-sm"
                                 />
                                 <div className="flex items-center gap-1 mt-2">
                                     <span className="text-[#D5CCFF] text-sm leading-6 tracking-[0.175px] font-semibold">
@@ -158,9 +158,9 @@ export default function TailoredPage() {
             {/* Contact */}
             <section className="bg-white py-14 px-5 lg:py-20 lg:px-60" id="tailored-form">
                 <div className="border border-[#E4E7EC] rounded-[30px] p-6 lg:p-8 w-full">
-                    <h4 className="text-2xl font-semibold text-[#141C25] lg:text-4xl">
+                    {/* <h4 className="text-2xl font-semibold text-[#141C25] lg:text-4xl">
                         Book a <span className="text-[#4419FF]">Strategy Session</span> today
-                    </h4>
+                    </h4> */}
                     {/* <Form /> */}
 
                     <div
