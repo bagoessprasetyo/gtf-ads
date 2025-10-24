@@ -2,9 +2,8 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Banner from "@/components/banner";
-import Button from "@/components/button";
 import Marquee from "react-fast-marquee";
-import Form from "@/components/form";
+import Button from "@/components/button"
 
 import {
     partner1, partner2, partner3, partner4, partner5, partner6,
@@ -42,7 +41,7 @@ export default function TailoredPage() {
     const images = [img1, img2, img3, img4, img5, img6];
 
     return (
-        <div>
+        <main>
             <Banner />
 
             {/* Partners */}
@@ -58,6 +57,9 @@ export default function TailoredPage() {
                                     key={index}
                                     src={img}
                                     alt={`partner-${index}`}
+                                    loading="lazy"
+                                    decoding="async"
+                                    placeholder="blur"
                                     className="w-auto h-auto mr-[39px]" />
                             ))}
                         </div>
@@ -68,6 +70,8 @@ export default function TailoredPage() {
                         <Image
                             key={index}
                             src={img}
+                            loading="lazy"
+                            decoding="async"
                             alt={`partner-${index}`}
                             className={`mx-auto ${index === 9 ? "w-20" : "h-auto w-full py-[27px] px-[66.943px]"}`}
                         />
@@ -94,6 +98,8 @@ export default function TailoredPage() {
                                 <Image
                                     src={img}
                                     alt={title}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="rounded-[2.757px] h-[165.405px] w-full md:w-[394.667px] md:h-[240px] lg:rounded-sm"
                                 />
                                 <div className="flex items-center gap-1 mt-2">
@@ -122,6 +128,8 @@ export default function TailoredPage() {
                     <Image
                         key={index} src={img}
                         alt={`gallery-${index}`}
+                        loading="lazy"
+                        decoding="async"
                         className="h-auto w-full object-contain" />
                 ))}
             </section>
@@ -143,6 +151,7 @@ export default function TailoredPage() {
 
                     <div className="relative">
                         <video
+                            preload="none"
                             autoPlay
                             loop
                             muted
@@ -162,7 +171,6 @@ export default function TailoredPage() {
                         Book a <span className="text-[#4419FF]">Strategy Session</span> today
                     </h4> */}
                     {/* <Form /> */}
-
                     <div
                         className="hs-form-frame"
                         data-region="na2"
@@ -171,6 +179,6 @@ export default function TailoredPage() {
                     />
                 </div>
             </section>
-        </div>
+        </main>
     );
 }
