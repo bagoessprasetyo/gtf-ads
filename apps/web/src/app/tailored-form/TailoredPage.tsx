@@ -86,7 +86,7 @@ export default function TailoredPage() {
                         We’ve done it for them. Now it’s your turn. Your results could be the next headline we write.
                     </p>
                     <Button link="#tailored-form" title="Read More" className="lg:hidden" />
-                    <Button link="#tailored-form" title="Reserve My Strategy Session" className="hidden lg:flex" />
+                    <Button link="#tailored-form" title="Book a Strategy Session" className="hidden lg:flex" />
 
                     <div className="flex flex-col gap-5 mt-6 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-4">
                         {cards.map(({ img, title, content }, index) => (
@@ -138,7 +138,7 @@ export default function TailoredPage() {
                             working as one system to build full-funnel strategies that convert. From first click to recurring revenue,
                             we blend marketing precision with technical depth to deliver measurable growth.
                         </p>
-                        <Button link="#tailored-form" title="Reserve My Strategy Session" className="hidden lg:flex mt-6" />
+                        <Button link="#tailored-form" title="Book a Strategy Session" className="hidden lg:flex mt-6" />
                     </div>
 
                     <div className="relative">

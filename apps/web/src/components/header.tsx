@@ -47,7 +47,7 @@ export default function Header() {
 					<a
 						href="#tailored-form"
 						className="px-5 py-2 text-sm font-medium rounded-md transition-colors bg-white text-[#1D00A0] h-auto md:h-9 md:text-[16px] tracking-[-0.176px] md:text-[#0A0A0A] md:px-4 md:py-[6px]">
-						Get a Proposal
+						Book a Strategy Session
 					</a>
 				</div>
 			</div>
