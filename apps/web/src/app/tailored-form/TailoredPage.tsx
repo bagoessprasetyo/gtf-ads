@@ -158,9 +158,9 @@ export default function TailoredPage() {
             {/* Contact */}
             <section className="bg-white py-14 px-5 lg:py-20 lg:px-60" id="tailored-form">
                 <div className="border border-[#E4E7EC] rounded-[30px] p-6 lg:p-8 w-full">
-                    <h4 className="text-2xl font-semibold text-[#141C25] lg:text-4xl">
+                    {/* <h4 className="text-2xl font-semibold text-[#141C25] lg:text-4xl">
                         Book a <span className="text-[#4419FF]">Strategy Session</span> today
-                    </h4>
+                    </h4> */}
                     {/* <Form /> */}
 
                     <div
