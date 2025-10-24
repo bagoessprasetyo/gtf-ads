@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import bgBanner from "../../public/images/Background.webp";
 import Button from "@/components/button";
 import Marquee from "react-fast-marquee";
@@ -5,6 +6,14 @@ import Image from "next/image";
 import { imageCarousel1, imageCarousel2, imageCarousel3, imageCarousel4, imageCarousel5, imageCarousel6, imageCarousel7, imageCarousel8 } from "../../public/images";
 
 export default function banner() {
+  const marquee = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = marquee.current;
+    if(!el) return;
+    
+  })
+
   const images = [
     { img: imageCarousel1 },
     { img: imageCarousel2 },
