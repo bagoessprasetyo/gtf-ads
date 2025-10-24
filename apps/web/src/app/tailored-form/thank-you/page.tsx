@@ -13,7 +13,7 @@ export default function ThankYouPage() {
           </svg>
         </div>
         <div className="text-center">
-          <h1 className="mb-2 text-2xl font-semibold leading-8 lg:text-5xl lg:leading-14">Thank you for signing up!</h1>
+          <h1 className="mb-2 text-2xl font-semibold leading-8 lg:text-5xl lg:leading-14 text-white">Thank you for signing up!</h1>
           <div className=" flex flex-col gap-6">
             <p className="text-[#E4E7EC] tracking-[0.08px]">Your "Conversion-Boosting Framework" is on its way to your inbox, don’t forget to check your email.</p>
             <p className="text-[#E4E7EC] tracking-[0.08px]">Our team will also reach out via WhatsApp soon for a quick hello. 👋</p>
