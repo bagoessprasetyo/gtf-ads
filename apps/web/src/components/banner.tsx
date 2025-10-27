@@ -1,9 +1,8 @@
 import bgBanner from "../../public/images/Background.webp";
 import Button from "@/components/button";
-import Marquee from "react-fast-marquee";
+// import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import { imageCarousel1, imageCarousel2, imageCarousel3, imageCarousel4, imageCarousel5, imageCarousel6, imageCarousel7, imageCarousel8 } from "../../public/images";
-import { useEffect } from "react";
 
 export default function banner() {
   const images = [
@@ -32,7 +31,32 @@ export default function banner() {
           </p>
           <div className="w-14 h-px bg-white hidden lg:block"></div>
         </div>
-        <Marquee>
+        <div className="relative flex items-center overflow-hidden">
+          <div className="marquee-track flex shrink-0">
+            {images.map(({ img }, i) => (
+              <Image
+                key={`img1-${i}`}
+                src={img}
+                alt={`carousel-${i}`}
+                priority={i < 3}
+                loading="eager"
+                className="w-[230px] h-[230px] rounded-[1.536px] lg:w-[400px] lg:h-[400px] lg:rounded-sm mr-3 lg:mr-5"
+              />
+            ))}
+          </div>
+          <div className="marquee-track flex shrink-0" aria-hidden="true">
+            {images.map(({ img }, i) => (
+              <Image
+                key={`img2-${i}`}
+                src={img}
+                loading="eager"
+                alt={`carousel-${i}`}
+                className="w-[230px] h-[230px] rounded-[1.536px] lg:w-[400px] lg:h-[400px] lg:rounded-sm mr-3 lg:mr-5"
+              />
+            ))}
+          </div>
+        </div>
+        {/* <Marquee>
           <div className="flex">
             {images.map(({ img }, i) => (
               <Image
@@ -44,7 +68,7 @@ export default function banner() {
               />
             ))}
           </div>
-        </Marquee>
+        </Marquee> */}
       </div>
     </section>
   )
