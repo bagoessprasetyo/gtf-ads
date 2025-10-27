@@ -40,8 +40,6 @@ export default function banner() {
                 src={img}
                 alt={`carousel-${i}`}
                 loading="lazy"
-                decoding="async"
-                placeholder="blur"
                 className="w-[230px] h-[230px] rounded-[1.536px] lg:w-[400px] lg:h-[400px] lg:rounded-sm  mr-3 lg:mr-5"
               />
             ))}

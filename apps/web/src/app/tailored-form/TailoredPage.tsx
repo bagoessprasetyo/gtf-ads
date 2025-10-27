@@ -58,8 +58,6 @@ export default function TailoredPage() {
                                     src={img}
                                     alt={`partner-${index}`}
                                     loading="lazy"
-                                    decoding="async"
-                                    placeholder="blur"
                                     className="w-auto h-auto mr-[39px]" />
                             ))}
                         </div>
@@ -71,7 +69,6 @@ export default function TailoredPage() {
                             key={index}
                             src={img}
                             loading="lazy"
-                            decoding="async"
                             alt={`partner-${index}`}
                             className={`mx-auto ${index === 9 ? "w-20" : "h-auto w-full py-[27px] px-[66.943px]"}`}
                         />
@@ -99,7 +96,6 @@ export default function TailoredPage() {
                                     src={img}
                                     alt={title}
                                     loading="lazy"
-                                    decoding="async"
                                     className="rounded-[2.757px] h-[165.405px] w-full md:w-[394.667px] md:h-[240px] lg:rounded-sm"
                                 />
                                 <div className="flex items-center gap-1 mt-2">
@@ -129,7 +125,6 @@ export default function TailoredPage() {
                         key={index} src={img}
                         alt={`gallery-${index}`}
                         loading="lazy"
-                        decoding="async"
                         className="h-auto w-full object-contain" />
                 ))}
             </section>
