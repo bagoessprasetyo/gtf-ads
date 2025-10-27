@@ -50,7 +50,29 @@ export default function TailoredPage() {
                     Trusted by Global Partners
                 </h3>
                 <div className="block md:hidden">
-                    <Marquee>
+                    <div className="relative flex items-center overflow-hidden">
+                        <div className="marquee-track flex shrink-0 flex-wrap">
+                            {imgPartners.map((img, index) => (
+                                <Image
+                                    key={index}
+                                    src={img}
+                                    alt={`partner-${index}`}
+                                    loading="lazy"
+                                    className="w-auto h-auto mr-[39px]" />
+                            ))}
+                        </div>
+                        <div className="marquee-track flex shrink-0 flex-wrap" aria-hidden="true">
+                            {imgPartners.map((img, index) => (
+                                <Image
+                                    key={index}
+                                    src={img}
+                                    alt={`partner-${index}`}
+                                    loading="lazy"
+                                    className="w-auto h-auto mr-[39px]" />
+                            ))}
+                        </div>
+                    </div>
+                    {/* <Marquee>
                         <div className="flex flex-wrap items-center">
                             {imgPartners.map((img, index) => (
                                 <Image
@@ -61,7 +83,7 @@ export default function TailoredPage() {
                                     className="w-auto h-auto mr-[39px]" />
                             ))}
                         </div>
-                    </Marquee>
+                    </Marquee> */}
                 </div>
                 <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-4 justify-center items-center gap-6 w-full">
                     {imgPartners.map((img, index) => (

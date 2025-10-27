@@ -25,7 +25,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-space-grotesk), "Space Grotesk", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-space-grotesk), "Space Grotesk", system-ui,
+    -apple-system, sans-serif;
 }
 
 p,
@@ -33,7 +34,8 @@ a,
 label,
 input,
 textarea {
-  font-family: var(--font-archivo), "Archivo", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-archivo), "Archivo", system-ui, -apple-system,
+    sans-serif;
 }
 
 :root {
@@ -158,6 +160,21 @@ textarea {
     to {
       transform: translateY(calc(-100% - var(--gap)));
     }
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 50s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 
