@@ -16,14 +16,23 @@ import {
 
 export default function TailoredPage() {
     useEffect(() => {
-        // hubspot
-        const script = document.createElement("script");
-        script.src = "https://js-na2.hsforms.net/forms/embed/46392522.js";
-        script.defer = true;
-        document.body.appendChild(script);
+        // HubSpot form embed
+        const formScript = document.createElement("script");
+        formScript.src = "https://js-na2.hsforms.net/forms/embed/46392522.js";
+        formScript.defer = true;
+        document.body.appendChild(formScript);
+
+        // HubSpot tracking code
+        const trackingScript = document.createElement("script");
+        trackingScript.src = "//js-na2.hs-scripts.com/46392522.js";
+        trackingScript.id = "hs-script-loader";
+        trackingScript.async = true;
+        trackingScript.defer = true;
+        document.body.appendChild(trackingScript);
 
         return () => {
-            document.body.removeChild(script);
+            document.body.removeChild(formScript);
+            document.body.removeChild(trackingScript);
         };
     }, []);
 
