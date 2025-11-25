@@ -4,7 +4,7 @@ import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
 import logoGetFound from "../../public/icons/logo-getfound.svg";
 
-export default function Header() {
+export default function Header({buttonName, link}: {buttonName: string, link: string}) {
 	// const links = [
 	// 	{ to: "/seo", label: "SEO" },
 	// 	{ to: "/sales-lead-generation", label: "Sales & Lead Generation" },
@@ -45,9 +45,9 @@ export default function Header() {
 				<div className="flex items-center gap-4">
 					{/* <ModeToggle /> */}
 					<a
-						href="#tailored-form"
+						href={link}
 						className="px-5 py-2 text-sm font-medium rounded-md transition-colors bg-white text-[#1D00A0] h-auto md:h-9 md:text-[16px] tracking-[-0.176px] md:text-[#0A0A0A] md:px-4 md:py-[6px]">
-						Book a Strategy Session
+						{buttonName}
 					</a>
 				</div>
 			</div>

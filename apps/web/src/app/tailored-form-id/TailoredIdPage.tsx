@@ -13,6 +13,7 @@ import {
 import {
   ashley, dore, ikigai, img1, img2, img3, img4, img5, img6,
 } from "../../../public/images";
+import Header from "@/components/header";
 
 export default function TailoredIdPage() {
   useEffect(() => {
@@ -51,7 +52,9 @@ export default function TailoredIdPage() {
 
   return (
     <main>
+      <Header buttonName="Konsultasi dengan Tim Kami" link="#tailored-form-id" />
       <Banner
+        link="#tailored-form-id"
         title="PARTNER GROWTH MARKETING FULL-FUNNEL Anda"
         description="Kami bantu pertumbuhan brand lewat strategi yang memberikan hasil nyata, lebih banyak leads, lebih banyak sales ."
         note="Dipercaya oleh 300+ brand di Asia untuk menghasilkan perumbuhan nyata"

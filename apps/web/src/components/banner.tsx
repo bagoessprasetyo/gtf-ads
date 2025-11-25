@@ -4,7 +4,7 @@ import Button from "@/components/button";
 import Image from "next/image";
 import { imageCarousel1, imageCarousel2, imageCarousel3, imageCarousel4, imageCarousel5, imageCarousel6, imageCarousel7, imageCarousel8 } from "../../public/images";
 
-export default function banner({ title, description, note, btnName }: { title: string; description: string, note: string, btnName: string }) {
+export default function banner({ title, description, note, btnName, link }: { title: string; description: string, note: string, btnName: string, link: string }) {
   const images = [
     { img: imageCarousel1 },
     { img: imageCarousel2 },
@@ -21,7 +21,7 @@ export default function banner({ title, description, note, btnName }: { title: s
       <div className="text-center w-full lg:w-[920px] lg:mx-auto px-5">
         <h1 className="text-[28px] font-semibold leading-9 tracking-[0.07px] uppercase lg:text-5xl lg:leading-14">{title}</h1>
         <p className="tracking-[0.08px] leading-6 mt-3 mb-7">{description}</p>
-        <Button link="#tailored-form" title={btnName} className="mx-auto" />
+        <Button link={link} title={btnName} className="mx-auto" />
       </div>
       <div>
         <div className="flex items-center justify-center gap-2.5 mb-4 md:mb-2.5 lg:mb-5 px-5">

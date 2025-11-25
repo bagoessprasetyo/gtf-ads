@@ -13,6 +13,7 @@ import {
 import {
     ashley, dore, ikigai, img1, img2, img3, img4, img5, img6,
 } from "../../../public/images";
+import Header from "@/components/header";
 
 export default function TailoredPage() {
     useEffect(() => {
@@ -51,7 +52,9 @@ export default function TailoredPage() {
 
     return (
         <main>
+			<Header buttonName="Book a Strategy Session" link="#tailored-form"/>
             <Banner
+                link="#tailored-form"
                 title="Your FULL-FUNNEL GROWTH MARKETING PARTNER"
                 description="Empowering brands with performance-driven growth that delivers real, measurable ROI."
                 note="Trusted by 300+ clients across SEA to scale smarter, and stronger"
