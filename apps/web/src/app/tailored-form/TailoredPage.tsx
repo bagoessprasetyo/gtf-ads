@@ -51,7 +51,12 @@ export default function TailoredPage() {
 
     return (
         <main>
-            <Banner />
+            <Banner
+                title="Your FULL-FUNNEL GROWTH MARKETING PARTNER"
+                description="Empowering brands with performance-driven growth that delivers real, measurable ROI."
+                note="Trusted by 300+ clients across SEA to scale smarter, and stronger"
+                btnName="Book a Strategy Session"
+            />
 
             {/* Partners */}
             <section className="py-10 bg-[#0A0A0A] lg:py-20 overflow-hidden lg:px-[120px]">
