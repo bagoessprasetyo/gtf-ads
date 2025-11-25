@@ -4,7 +4,7 @@ import Button from "@/components/button";
 import Image from "next/image";
 import { imageCarousel1, imageCarousel2, imageCarousel3, imageCarousel4, imageCarousel5, imageCarousel6, imageCarousel7, imageCarousel8 } from "../../public/images";
 
-export default function banner() {
+export default function banner({ title, description, note, btnName, link }: { title: string; description: string, note: string, btnName: string, link: string }) {
   const images = [
     { img: imageCarousel1 },
     { img: imageCarousel2 },
@@ -19,15 +19,15 @@ export default function banner() {
   return (
     <section className="bg-[#0E004D] py-8 text-white bg-cover bg-bottom flex flex-col gap-8" style={{ backgroundImage: `url(${bgBanner})` }}>
       <div className="text-center w-full lg:w-[920px] lg:mx-auto px-5">
-        <h1 className="text-[28px] font-semibold leading-9 tracking-[0.07px] uppercase lg:text-5xl lg:leading-14">Your FULL-FUNNEL GROWTH MARKETING PARTNER</h1>
-        <p className="tracking-[0.08px] leading-6 mt-3 mb-7">Empowering brands with performance-driven growth that delivers real, measurable ROI. </p>
-        <Button link="#tailored-form" title="Book a Strategy Session" className="mx-auto" />
+        <h1 className="text-[28px] font-semibold leading-9 tracking-[0.07px] uppercase lg:text-5xl lg:leading-14">{title}</h1>
+        <p className="tracking-[0.08px] leading-6 mt-3 mb-7">{description}</p>
+        <Button link={link} title={btnName} className="mx-auto" />
       </div>
       <div>
         <div className="flex items-center justify-center gap-2.5 mb-4 md:mb-2.5 lg:mb-5 px-5">
           <div className="w-14 h-px bg-white hidden lg:block"></div>
           <p className="text-sm leading-6 tracking-[0.175px] text-center">
-            Trusted by 300+ clients across SEA to scale smarter, and stronger
+            {note}
           </p>
           <div className="w-14 h-px bg-white hidden lg:block"></div>
         </div>

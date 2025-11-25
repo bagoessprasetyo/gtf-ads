@@ -58,7 +58,6 @@ export default function RootLayout({
 						) : (
 							// All other pages with header and footer
 							<div className="grid grid-rows-[auto_1fr_auto] h-svh">
-								<Header />
 								{children}
 								<Footer />
 							</div>
